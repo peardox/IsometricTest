@@ -1,6 +1,6 @@
 # IsometricTest
 
-![grab](screenshots\grab.jpg)
+![grab](screenshots/grab.jpg)
 
 ## Important
 
