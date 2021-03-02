@@ -1,6 +1,6 @@
 # IsometricTest
 
-![grab](C:\dev\play\Isometric\screenshots\grab.jpg)
+![grab](screenshots\grab.jpg)
 
 ## Important
 
