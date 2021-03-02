@@ -8,6 +8,8 @@ This project requires some graphical assets (a load of monsters) so you'll need 
 
 https://pvgames.itch.io/pvgames-free-assets-apex-predators
 
+The assets are available for no payment (i.e. it's a Pay What You Want) but are licensed so can't be included in this repo (it's a 100+M download anyway)
+
 Once you've got the ZIP file place it in the data directory and extract it in-place (not in a sub-directory)
 
 There is already a PVGames_ApexPredators directory in data, this contains the Starling Texture Atlases. The ZIP will add the required PNG files that are not in this repo.
