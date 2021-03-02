@@ -262,20 +262,13 @@ begin
   if CurrentModel > 0 then
     begin
       Dec(CurrentModel);
-      CurrentMap := Length(Maps) - 1;
-      LoadScene('castle-data:/PVGames_ApexPredators/' + Models[CurrentModel] + '/apex_map_' + Maps[CurrentMap] + '.starling-xml', CurrentModel, 0, false);
-      CurrentAnimation := Scene.AnimationsList.Count - 1;
-      Scene.PlayAnimation(Scene.AnimationsList[CurrentAnimation], true);
+      LoadScene('castle-data:/PVGames_ApexPredators/' + Models[CurrentModel] + '/apex_map_' + Maps[CurrentMap] + '.starling-xml', CurrentModel, CurrentAnimation);
     end
   else
     begin
       CurrentModel := Length(Models) - 1;
-      CurrentMap := Length(Maps) - 1;
-      LoadScene('castle-data:/PVGames_ApexPredators/' + Models[CurrentModel] + '/apex_map_' + Maps[CurrentMap] + '.starling-xml', CurrentModel, 0, false);
-      CurrentAnimation := Scene.AnimationsList.Count - 1;
-      Scene.PlayAnimation(Scene.AnimationsList[CurrentAnimation], true);
+      LoadScene('castle-data:/PVGames_ApexPredators/' + Models[CurrentModel] + '/apex_map_' + Maps[CurrentMap] + '.starling-xml', CurrentModel, CurrentAnimation);
     end;
-  UpdateAnimationLabels;
 end;
 
 procedure TCastleApp.LoadScene(filename: String; const ModelIdx: Integer; const AnimationIdx: Integer; SetAnimation: Boolean = True);
