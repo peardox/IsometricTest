@@ -15,7 +15,9 @@ There is already a PVGames_ApexPredators directory in data, this contains the St
 If you've extracted everything correctly the three following directories should contain 8 x *.starling.xml and 9 x *.png each
 
 data/PVGames_ApexPredators/Apex_Hunter
+
 data/PVGames_ApexPredators/Apex_Predator
+
 data/PVGames_ApexPredators/Apex_Stalker
 
 ## Dependencies
