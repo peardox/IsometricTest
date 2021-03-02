@@ -1,0 +1,99 @@
+Log for "Isometric".
+  Started on 2021-03-02 at 11:01:04.
+  Castle Game Engine version: 7.0-alpha.snapshot (unstable).
+  Compiled with: FPC 3.2.0 (Darwin / aarch64), platform: iOS.
+2021-03-02 11:01:04.366325+0000 Isometric Mobile App[56720:4791988] Metal GPU Frame Capture Enabled
+2021-03-02 11:01:04.366598+0000 Isometric Mobile App[56720:4791988] Metal API Validation Enabled
+Rendering context will be initialized with these (minimal) buffer sizes: red 1, green 1, blue 1, alpha 0, depth 24, stencil 0
+Library initialized, set application config directory to URL: file:///var/mobile/Containers/Data/Application/64ED665E-503C-4F6D-99BB-22D7266D85F9/Library/
+Library received CGEApp_Open (window size: 1536 2048)
+-------------------- Rendering Context Initialization begin
+OpenGLES information (detected by Isometric):
+
+--------
+Version:
+  Version string: OpenGL ES 2.0 Metal - 68.8
+  Version parsed: major: 2, minor: 0, release exists: False, release: 0, vendor-specific information: "Metal - 68.8"
+  Vendor-specific version parsed: major: 68, minor: 8, release: 0
+  Vendor: Apple Inc.
+  Vendor type: Unknown
+
+  Renderer: Apple A9X GPU
+  Fglrx (ATI on Linux): False
+  Mesa: False
+
+  Buggy glGenerateMipmap(EXT): False
+  Buggy GL_LIGHT_MODEL_TWO_SIDE: False
+  Buggy VBO: False
+  Buggy shader shadow map: False
+  Buggy FBO rendering to multi-sampling texture: False
+  Buggy FBO rendering to cube map texture: False
+  Buggy swap buffers with non-standard glViewport: False
+  Buggy 32-bit depth buffer: False
+  Buggy GLSL gl_FrontFacing: False
+  Buggy GLSL read varying: False
+  Buggy Pure Shader Pipeline: False
+  Buggy Texture Size Above 2048: False
+
+---------
+Features:
+  Shaders (GLSL) support: Standard
+  => Enable deprecated (fixed-function) support: False
+  Multi-texturing: True
+  Framebuffer Object: Standard (or ARB "core extension")
+  Multi-sampling for FBO buffers and textures: False
+  Vertex Buffer Object: True
+  GenerateMipmap available (and reliable): True
+  Cube map textures: Standard
+  Compressed textures supported: [PVRTC1_4bpp_RGB, PVRTC1_2bpp_RGB, PVRTC1_4bpp_RGBA, PVRTC1_2bpp_RGBA]
+  3D textures: None
+  Textures non-power-of-2: True
+  Blend constant parameter: True
+  Float textures: False
+  Depth textures: True
+  Packed depth + stencil: True
+
+  All extensions: GL_OES_depth_texture GL_OES_depth_texture_cube_map GL_OES_depth24 GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_mapbuffer GL_OES_packed_depth_stencil GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_texture_float GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_vertex_array_object GL_EXT_blend_minmax GL_EXT_color_buffer_half_float GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_discard_framebuffer GL_EXT_draw_instanced GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_occlusion_query_boolean GL_EXT_pvrtc_sRGB GL_EXT_read_format_bgra GL_EXT_separate_shader_objects GL_EXT_shader_framebuffer_fetch GL_EXT_shader_texture_lod GL_EXT_shadow_samplers GL_EXT_sRGB GL_EXT_texture_filter_anisotropic GL_EXT_texture_rg GL_EXT_texture_storage GL_APPLE_clip_distance GL_APPLE_color_buffer_packed_float GL_APPLE_copy_texture_levels GL_APPLE_framebuffer_multisample GL_APPLE_rgb_422 GL_APPLE_sync GL_APPLE_texture_format_BGRA8888 GL_APPLE_texture_max_level GL_APPLE_texture_packed_float GL_IMG_read_format GL_IMG_texture_compression_pvrtc 
+
+---------------------------
+Current buffers bit depths:
+  Color (red / green / blue / alpha): 8 / 8 / 8 / 8
+  Depth: 32
+  Stencil: 8
+  Multi-sampling (full-screen anti-aliasing) possible: True
+    Current: 1 samples per pixel
+
+-------
+Limits:
+  Max clip planes: 8
+  Max lights (fixed-function limit): 8
+  Max texture size: 4096
+  Max viewport dims (width, height): 4096 4096
+  Max texture units (shader pipeline): 8
+  Max texture units (fixed-function): 0
+  Max cube map texture size: 4096
+  Max 3d texture size: 3D textures not available
+  Max texture max anisotropy: EXT_texture_filter_anisotropic not available
+  Query counter bits (for occlusion query): ARB_occlusion_query not available
+  Max renderbuffer size: 4096
+  Max line width: 1
+
+-------
+Memory (in Kb):
+  Total: 0 (unknown)
+  Current: 0 (unknown)
+  Current for VBO: 0 (unknown)
+  Current for Textures: 0 (unknown)
+  Current for Renderbuffers: 0 (unknown)
+-------------------- Rendering Context Initialization end
+2021-03-02 11:01:04.456465+0000 Isometric Mobile App[56720:4791988] fopen failed for data file: errno = 2 (No such file or directory)
+2021-03-02 11:01:04.456588+0000 Isometric Mobile App[56720:4791988] Errors found! Invalidating cache...
+2021-03-02 11:01:04.470939+0000 Isometric Mobile App[56720:4791988] fopen failed for data file: errno = 2 (No such file or directory)
+2021-03-02 11:01:04.471061+0000 Isometric Mobile App[56720:4791988] Errors found! Invalidating cache...
+Path: Program data path detected as "file:///private/var/containers/Bundle/Application/704AC627-4CCA-4543-9BED-2EEF636B5236/Isometric%20Mobile%20App.app/data/"
+2021-03-02 11:01:05.636938+0000 Isometric Mobile App[56720:4791988] fopen failed for data file: errno = 2 (No such file or directory)
+2021-03-02 11:01:05.637066+0000 Isometric Mobile App[56720:4791988] Errors found! Invalidating cache...
+Warning: Texture: Cannot load the texture:
+  Error EImageLoadError when loading texture from URL "castle-data:/PVGames_ApexPredators/Apex_Hunter/Sprite_1.png": Error loading image from URL "castle-data:/PVGames_ApexPredators/Apex_Hunter/Sprite_1.png": CRC check failed
+Warning: ssStaticCollisions used on scene "" but the geometry changed. Freeing the spatial structure. You should use ssDynamicCollisions for this scene
+

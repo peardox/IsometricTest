@@ -277,7 +277,7 @@ begin
     if not(Scene = nil) then
       FreeAndNil(Scene);
     Scene := TCastleScene.Create(Application);
-    Scene.Spatial := [ssStaticCollisions, ssDynamicCollisions, ssRendering];
+    Scene.Spatial := [ssDynamicCollisions, ssRendering];
     Scene.RenderOptions.MinificationFilter := minNearest;
     Scene.RenderOptions.MagnificationFilter := magNearest;
     Scene.Setup2D;
