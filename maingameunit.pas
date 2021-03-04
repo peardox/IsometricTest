@@ -1,8 +1,8 @@
 unit MainGameUnit;
 
 {$mode objfpc}{$H+}
-{$define use_character}
-{$define showcam}
+// {$define use_licensed_characters}
+// {$define showcam}
 
 interface
 
@@ -78,7 +78,7 @@ var
   RenderReady: Boolean;
 
 const
-  {$if defined(use_character)}
+  {$if defined(use_licensed_characters)}
   Models: Array[0..1] of String = ('Female_Mage', 'Mage_Base');
   Maps: Array[0..3] of String = ('1', '2', '3', '4');
   ModelTemplate: String =  'character';
