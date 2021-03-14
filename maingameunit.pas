@@ -2,7 +2,7 @@ unit MainGameUnit;
 
 {$mode objfpc}{$H+}
 // {$define use_licensed_characters}
-// {$define showcam}
+{$define showcam}
 
 interface
 
@@ -83,7 +83,7 @@ const
   Maps: Array[0..3] of String = ('1', '2', '3', '4');
   ModelTemplate: String =  'character';
   {$else}
-  Models: Array[0..2] of String = ('Apex_Hunter', 'Apex_Predator', 'Apex_Stalker');
+  Models: Array[0..2] of String = ('Apex_Hunter', 'Apex_Predator', 'Apex_Stalker'); // 'HellChicken',
   Maps: Array[0..7] of String = ('1', '2', '3', '4', '5', '6', '7', '8');
   ModelTemplate: String =  'apex';
   {$endif}
@@ -162,11 +162,10 @@ begin
   // Set up the background viewport
   Birdport := TCastleViewport.Create(Application);
   Birdport.FullSize := true;
-  Birdport.Setup2D;
   Birdport.AutoNavigation := True;
-  Birdport.Camera.Orthographic.Origin := Vector2(0.5, 0.5);
-  Birdport.Camera.Direction := Vector3(-1, -1, -1);
   Birdport.Transparent := True;
+  Birdport.Camera.Orthographic.Origin := Vector2(0.5, 0.5);
+  Birdport.Setup2D;
   InsertFront(Birdport);
 
   // Hacky load inline of parrot in Isometric view
@@ -181,9 +180,14 @@ begin
       True,
       Birdport.PrepareParams);
 
-//  BirdScene.Load('castle-data:/parrot.glb');
-  BirdScene.Load('castle-data:/cross3.x3dv');
-  BirdScene.Scale := Vector3(2.12765957447, 2.12765957447, 2.12765957447);
+  BirdScene.Load('castle-data:/parrot.glb');
+  BirdScene.Scale := Vector3(227.2, 227.2, 227.2);
+//  BirdScene.Load('castle-data:/cross3.x3dv');
+//  BirdScene.Scale := Vector3(2.2, 2.2, 2.2);
+//  BirdScene.Load('castle-data:/monster.gltf');
+//  BirdScene.Scale := Vector3(50, 50, 50);
+//  BirdScene.Translation := Vector3(500, 500, 0);
+  BirdScene.Rotation := Vector4(0, 1, 0, -pi / 4);
   Birdport.Items.Add(BirdScene);
   Birdport.Items.MainScene := BirdScene;
 
@@ -334,7 +338,7 @@ begin
             True,
             Viewport.PrepareParams);
         Viewport.Items.Add(Scene);
-        Viewport.Items.MainScene := Scene;
+//        Viewport.Items.MainScene := Scene;
 
         if SetAnimation then
           begin
@@ -391,7 +395,11 @@ procedure TCastleApp.BeforeRender;
 {$ifdef showcam}
 var
   Pos, Dir, Up: TVector3;
+{$else}
+var
 {$endif}
+  bpc: TVector2;
+  bpp: TVector3;
 begin
   inherited;
   LabelFPS.Caption := 'FPS = ' + FormatFloat('####0.00', Container.Fps.RealFps);
@@ -400,7 +408,7 @@ begin
   if not(BirdScene = nil) then
     begin
     Birdport.Camera.GetView(Pos, Dir, Up);
-{
+
     LabelCamPos.Caption := 'Cam Pos : ' +
       FormatFloat('####0.00', Pos.X) + ', ' +
       FormatFloat('####0.00', Pos.Y) + ', ' +
@@ -416,14 +424,6 @@ begin
         FormatFloat('####0.00', Up.Y) + ', ' +
         FormatFloat('####0.00', Up.Z);
 
-}
-    LabelCamPos.Caption := 'Origin : ' + Birdport.Camera.Orthographic.Origin.ToString;
-
-    LabelCamDir.Caption := 'Window Size : ' + FloatToStr(Container.Width) + ' x ' +
-                           FloatToStr(Container.Height);
-    LabelCamUp.Caption := 'Effective Size: ' + FloatToStr(
-    Birdport.Camera.Orthographic.EffectiveWidth) + ' x ' + FloatToStr(
-    Birdport.Camera.Orthographic.EffectiveHeight);
     end;
 {$endif}
 end;
@@ -442,8 +442,6 @@ end;
 
 procedure TCastleApp.Resize;
 begin
-//  With Birdport.Camera do
-//  SetView(Vector3(Orthographic.EffectiveWidth / 2, Orthographic.EffectiveHeight / 2, 500), Vector3(-1, -1, -1), Vector3(0, 1, 0));
   inherited;
 end;
 
